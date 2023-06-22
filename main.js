@@ -11,7 +11,9 @@ addBtn.addEventListener("click", (e) => {
   if (input.value == 0) {
     alert("Agrega una tarea")
 
-  } else {
+ 
+
+  }else{
     var check = document.createElement("input");
     check.type = "checkbox";
     const li = document.createElement("li");
