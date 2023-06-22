@@ -30,6 +30,7 @@ return;
   } else{
     var check = document.createElement("input");
     check.type = "checkbox";
+    check.classList.add("check-button");
     const li = document.createElement("li");
     const p = document.createElement("p");
     p.classList.add("textoTarea");
