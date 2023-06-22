@@ -3,10 +3,14 @@ const addBtn = document.querySelector(".btn-add");
 const ul = document.querySelector("#elementList");
 const empty = document.querySelector(".empty");
 const contaTarea=document.querySelector("#contaTarea");
-
+addBtn.addEventListener('keypress',addTask);
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
+addTask();
+
+});
+function addTask(){
   const text = input.value;
 
   var lista_tarea =document.querySelectorAll(".textoTarea");
@@ -48,7 +52,8 @@ return;
     empty.style.display = "none";
 
   }
-});
+
+}
 function count(){
   var contador = 0;
   var lista = document.querySelectorAll("input[type='checkbox']");
