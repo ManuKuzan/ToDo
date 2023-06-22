@@ -8,16 +8,31 @@ addBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   const text = input.value;
+
+  var lista_tarea =document.querySelectorAll(".textoTarea");
+  var ExisteTarea =false;
+  for(let index=0;index<lista_tarea.length;index++){
+    var TextoP= lista_tarea[index];
+    if(TextoP.textContent==text){
+      ExisteTarea=true;
+
+    }
+  }
+
   if (input.value == 0) {
     alert("Agrega una tarea")
 
- 
 
-  }else{
+  }else if(ExisteTarea==true){
+    alert("Ya Existe esa tarea, agrega otra")
+
+return;
+  } else{
     var check = document.createElement("input");
     check.type = "checkbox";
     const li = document.createElement("li");
     const p = document.createElement("p");
+    p.classList.add("textoTarea");
     p.textContent = text;
 
     check.addEventListener("change", count);
