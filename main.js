@@ -17,14 +17,14 @@ function addTask() {
 
   for (let index = 0; index < lista_tarea.length; index++) {
     var TextoP = lista_tarea[index];
-    if (TextoP.textContent.toLowerCase() === text) {
+    if (TextoP.textContent.toLowerCase().trim() === text.toLowerCase().trim()) {
       // Comparar en minúsculas
       ExisteTarea = true;
       break; // Salir del bucle si se encuentra una tarea repetida
     }
   }
 
-  if (text.length === 0) {
+  if (text.trim().length === 0) {
     Swal.fire({
       title: 'Porfavor agrega una tarea',
       showClass: {
