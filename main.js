@@ -25,9 +25,22 @@ function addTask() {
   }
 
   if (text.length === 0) {
-    alert("Agrega una tarea");
+    Swal.fire({
+      title: 'Porfavor agrega una tarea',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    });
   } else if (ExisteTarea) {
-    alert("Ya existe esa tarea, agrega otra");
+    Swal.fire({
+      icon: 'error',
+      title: 'Esta tarea ya existe',
+      text: 'digita otra tarea',
+      footer: 'ʕ•́ᴥ•̀ʔっ'
+    });
   } else {
     var check = document.createElement("input");
     check.type = "checkbox";
